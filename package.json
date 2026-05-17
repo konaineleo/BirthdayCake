@@ -1,0 +1,14 @@
+{
+  "name": "retro-threejs-birthday-cake",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "node scripts/vendor-three.mjs",
+    "dev": "node server.mjs",
+    "check": "node --check src/main.js && node --check src/scene.js && node --check src/cake.js && node --check src/animations.js && node --check src/animation.js && node --check src/ui.js && node --check server.mjs && node --check scripts/vendor-three.mjs"
+  },
+  "dependencies": {
+    "three": "0.164.1"
+  }
+}

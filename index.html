@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three.js Retro Birthday Cake</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app-wrapper">
+    <div class="border-top" aria-hidden="true">• ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ •</div>
+    <div class="border-bottom" aria-hidden="true">❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ • ❤️ •</div>
+    <div class="border-left" aria-hidden="true">✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨</div>
+    <div class="border-right" aria-hidden="true">✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨</div>
+
+    <div id="canvas-container" aria-label="3D rotating birthday cake">
+      <canvas id="scene"></canvas>
+    </div>
+
+    <div id="ui-layer" aria-live="polite">
+      <button id="clickMeButton" type="button">Click Me!</button>
+      <p id="wishPrompt">Wait... Can I wish you?</p>
+      <h1 id="birthdayReveal" hidden>HAPPY BIRTHDAY!!</h1>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

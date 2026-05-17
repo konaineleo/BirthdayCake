@@ -1,0 +1,32 @@
+# Three.js Birthday Cake Project
+
+Browser-based Three.js scene of a cozy retro birthday cake built from real 3D cylindrical geometry.
+
+Files:
+- `index.html`: Browser entry point and Three.js import map.
+- `styles/style.css`: Full-screen responsive canvas and retro pixelated rendering style.
+- `src/main.js`: App bootstrap.
+- `src/scene.js`: Renderer, camera, lighting, shadows, plate, floor, and responsive sizing.
+- `src/cake.js`: Layered cylindrical cake geometry, lavender frosting, drips, icing, candle, flame, and decorations.
+- `src/animations.js`: Infinite cakeGroup rotation, local candle sway, flame flicker, and sparkles.
+- `src/animation.js`: Compatibility re-export for older imports.
+- `src/ui.js`: Action-I "Click Me!" chase sequence and birthday reveal placeholder.
+- `server.mjs`: Tiny local static server using Node built-ins.
+- `package.json`: `npm install` and `npm run dev` workflow.
+- `scripts/vendor-three.mjs`: Copies Three.js from `node_modules` into `vendor`.
+- `vendor/three/build/three.module.js`: Local Three.js module used by the browser import map.
+
+Install and run:
+
+```powershell
+npm install
+npm run dev
+```
+
+Then open `http://localhost:5173`.
+
+You can also run the static server directly:
+
+```powershell
+node server.mjs
+```
