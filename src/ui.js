@@ -1,3 +1,10 @@
+// Grab the name from the browser link (e.g., ?name=Sarah)
+const urlParams = new URLSearchParams(window.location.search);
+let receiverName = urlParams.get('name');
+
+if (receiverName) {
+    receiverName = receiverName.trim();
+}
 const MAX_CLICKS = 5;
 
 export function initCakeUi() {
@@ -19,6 +26,11 @@ export function initCakeUi() {
     if (clickCount >= MAX_CLICKS) {
       button.classList.add('is-hidden');
       prompt.classList.add('is-hidden');
+      if (receiverName) {
+        reveal.innerText = "HAPPY BIRTHDAY, " + receiverName.toUpperCase() + "!!";
+      } else {
+        reveal.innerText = "HAPPY BIRTHDAY!!";
+      }
       reveal.hidden = false;
       launchConfetti();
       triggerHeartBoom();
